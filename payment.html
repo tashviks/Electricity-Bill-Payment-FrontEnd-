@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<title>Payment Page</title>
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png">
+
+	<style type="text/css">
+
+		/*all css for this page is internal as it was created at last and I did not want to mess up with my style file*/
+
+ 
+html,body
+ {
+  font-family: 'Montserrat';
+
+  display: flex;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: #f4f4f4;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background-image: url("bg1.jpg");
+
+}	
+
+.checkout-panel 
+{
+  display: flex;
+
+  flex-direction: column;
+
+  width: 500px;
+
+  height: 700px;
+
+  background-color: skyblue;
+
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.panel-body 
+{
+  padding: 45px 80px 0;
+
+  flex: 1;
+}
+ 
+.title 
+{
+  font-weight: 700;
+
+  margin-top: 0;
+
+  margin-bottom: 40px;
+  
+}
+`
+
+ 
+.method 
+{
+  width: 382px;
+
+  height: 122px;
+
+  padding-top: 20px;
+
+  cursor: pointer;
+
+  border: 1px solid transparent;
+
+  border-radius: 2px;
+
+  background-color: rgb(249, 249, 249);
+
+  justify-content: center;
+
+  align-items: center;
+}
+ 
+
+
+input[type='radio']
+ {
+
+  display: inline-block;
+
+}
+
+.input-fields label 
+{
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: black;
+}
+ 
+.info {
+  font-size: 12px;
+
+  font-weight: 300;
+
+  display: block;
+
+  margin-top: 50px;
+
+  opacity: .5;
+
+  color: #2e2e2e;
+}
+ 
+input[type='text'],
+input[type='password'] 
+{
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  padding-right: 40px;
+  padding-left: 16px;
+  color: black;
+  border: 1px solid rgb(0,0,0); /* taken from net else box was disappear */
+  border-radius: 4px;
+  outline: none;
+}
+ 
+
+ 
+.small-inputs 
+{
+  display: flex;
+
+  margin-top: 20px;
+
+  justify-content: space-between;
+
+}
+ 
+.small-inputs div 
+{
+
+  width: 182px;
+
+}
+
+.btn 
+{
+  font-size: 16px;
+
+  width: 163px;
+
+  height: 48px;
+
+  cursor: pointer;
+
+  letter-spacing: 1px;
+
+  border: none;
+
+  border-radius: 23px;
+}
+ 
+.back-btn
+ {
+  color: #f62f5e;
+
+  background: #fff;
+}
+ 
+.next-btn
+ {
+  color: #fff;
+
+  background: steelblue;
+}
+ 
+.btn:focus 
+{
+  outline: none;
+}
+ 
+.btn:hover
+ {
+  transform: scale(1.1);
+}
+.blue-border
+ {
+  border: 1px solid rgb(110, 178, 251);
+}	
+
+	</style>
+</head>
+<body>
+
+	<div class="checkout-panel" style="border-style: solid;">
+  <div class="panel-body">
+    <h2 class="title">Pay you balance and Checkout</h2>
+
+ 
+    <div class="payment-method">
+      <label for="card" class="method card">
+        <div class="card-logos">
+          <img src="visa.png" width="80" height="20">
+        </div>
+ 
+        <div class="radio-input">
+          <input id="card" type="radio" name="payment" style="margin-top: 20px;">
+          Pay ₹ 340.00 with credit card
+        </div>
+      </label>
+
+      <br>
+ 
+      <label for="paypal" class="method paypal">
+        <img src="paypal.png" width="60" height="60">
+        <div class="radio-input">
+          <input id="paypal" type="radio" name="payment">
+          Pay ₹ 340.00 with PayPal
+        </div>
+      </label>
+    </div>
+ 
+    <div class="input-fields">
+      <div class="column-1">
+      	<br>
+        <label for="cardholder">Cardholder's Name</label>
+        <input type="text" id="cardholder">
+        <br>
+ 
+        <div class="small-inputs">
+          <div>
+            <label for="date">Valid thru</label><span></span>
+            <input type="text" maxlength="5" id="date" placeholder="MM / YY" style="width : 50%;"  >
+          </div>
+ 
+          <div>
+            <label for="verification">CVV / CVC</label>
+            <input type="password"  maxlength="3" id="verification" >
+          </div>
+        </div>
+      	<br>
+        <label for="cardnumber">Card Number</label>
+        <input type="password" id="cardnumber" maxlength="16" >
+      </div>
+    </div>
+  </div>
+ 
+  <div class="panel-footer" align="center" style="margin-bottom: 60px;">
+  	<span>⠀⠀⠀⠀ </span>
+    <a href="home.html"><button class="btn back-btn">Back</button></a>
+    <span>⠀⠀</span>
+   <a href="https://www.safetynet-inc.com/resources/blog/phishing-attacks-do-not-click-links/#:~:text=What%20is%20Phishing%3F,%2C%20don't%20click%20links!"><button class="btn next-btn" onclick="alertbox()">Next Step</button></a> 
+  </div>
+</div>
+
+
+
+
+</body>
+
+
+<script>
+
+    function alertbox()
+    {
+      alert("Your Payment is being processed");
+
+    }
+    </script>
+</html>
+
